@@ -1,6 +1,6 @@
 .leftDabba{
     margin: 7px 2px;
-    background-color: #3b3636;
+    background-color: #121212;
     width: 19vw;
     padding: 4px;
     height: 100vh;
@@ -8,14 +8,14 @@
 }
 .rightDabba{
     margin: 7px 2px;
-    background-color: #3b3636;
+    background-color: #121212;
     width: 30vw;
     padding: 4px;
     height: 100vh;
     border-radius: 15px;
 }
 .midDabba{
-    background-color: #3b3636;
+    background-color: #121212;
     position: relative;
     margin: 7px 2px;
     width: 60%; 
@@ -29,7 +29,7 @@
 }
 
 .chatBTN{
-    background-color: #a9a9a9; /* DodgerBlue */
+    background-color: #272727; /* DodgerBlue */
     color: #fff;
     border: none;
     margin: 2vw 3vh 1vw;
@@ -42,10 +42,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #1111119d;
     
 }
 
 .chatBTN:hover{
-    background-color: rgba(255, 64, 64, 0.705); 
+    background-color: #3b3b3b; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #5c5c5c9d;
     
 }
