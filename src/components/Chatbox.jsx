@@ -9,7 +9,7 @@ function Chatbox({
     text,
     options = ["Group Description",
         //  "Leave Group", "Delete Chat", "Mute"
-        ]
+    ]
 }) {
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -74,15 +74,18 @@ function Chatbox({
 
                 <div className={styles.separation}></div>
 
-                {selectedOption && (
-                <div className={styles['option-content']}>
-                    {selectedOption === "Group Description" && (
-                        <div className={styles['group-description']}>
-                            <h2>Group Description</h2>
-                            <p>This is the group description content.</p>
-                        </div>
-                    )}
-                    {/* {selectedOption === "Leave Group" && (
+
+                <ul className={styles.chats}>
+                    <li style={{ listStyle: 'none' }}>
+                        {selectedOption && (
+                            <div className={styles['option-content']}>
+                                {selectedOption === "Group Description" && (
+                                    <div className={styles['group-description']}>
+                                        <h2>Group Description</h2>
+                                        <p>This is the group description content.</p>
+                                    </div>
+                                )}
+                                {/* {selectedOption === "Leave Group" && (
                         <div className={styles['leave-group']}>
                             <h2>Leave Group</h2>
                             <p>Are you sure you want to leave the group?</p>
@@ -100,16 +103,16 @@ function Chatbox({
                             <p>The chat has been muted.</p>
                         </div>
                     )} */}
-                </div>
-            )}
-                <ul className={styles.chats}>
-                     {list.map ((message, index) => (
-                        <li 
-                        style={{listStyle: 'none'}} 
-                        key={index}
-                        className={message.isSender ? styles.sender : styles.receiver}
-                        > 
-                        {message.text} 
+                            </div>
+                        )}
+                    </li>
+                    {list.map((message, index) => (
+                        <li
+                            style={{ listStyle: 'none' }}
+                            key={index}
+                            className={message.isSender ? styles.sender : styles.receiver}
+                        >
+                            {message.text}
                         </li>
                     ))
                     }
